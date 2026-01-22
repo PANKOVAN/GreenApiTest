@@ -1,16 +1,68 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Green API Test</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src='main.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://unpkg.com/@green-api/whatsapp-api-client/lib/whatsapp-api-client.min.js"></script>
+    <script src='main.js' defer></script>
 </head>
+
 <body>
-    <h1></h1>
-    <button type="button" class="btn btn-primary">Primary</button>
+    <div class="container">
+        <h1>Green API</h1>
+        <div class="row">
+            <div class="col-3">
+                <form>
+                    <div class="mb-4">
+                        <!-- <label for="idInstance" class="form-label">idInstance</label> -->
+                        <input id="idInstance" type="text" class="form-control" placeholder="idInstance">
+                    </div>
+                    <div class="mb-4">
+                        <!-- <label for="ApiTokenInstance" class="form-label">ApiTokenInstance</label> -->
+                        <input id="ApiTokenInstance" type="text" class="form-control" placeholder="ApiTokenInstance">
+                    </div>
+                    <button id="getSettings" type="submit" class="btn btn-primary m-1">getSettings</button>
+                    <button id="getStateInstance" type="submit" class="btn btn-primary m-1">getStateInstance</button>
+                </form>
+                <hr />
+                <form>
+                    <div class="mb-4">
+                        <!-- <label for="messagePhone" class="form-label">Phone</label> -->
+                        <input type="text" class="form-control" id="messagePhone" placeholder="phone">
+                    </div>
+                    <div class="mb-4">
+                        <!-- <label for="messageText" class="form-label">Text</label> -->
+                        <textarea type="text" class="form-control" id="messageText"
+                            placeholder="Message text"></textarea>
+                    </div>
+                    <button id="sendMessage" type="submit" class="btn btn-primary m-1">sendMessage</button>
+                </form>
+                <hr />
+                <form>
+                    <div class="mb-4">
+                        <!-- <label for="messagePhone1" class="form-label">Phone</label> -->
+                        <input type="text" class="form-control" id="messagePhone1" placeholder="phone">
+                    </div>
+                    <div class="mb-4">
+                        <!-- <label for="messageUrl" class="form-label">File URL</label> -->
+                        <input type="text" class="form-control" id="messageUrl" placeholder="File URL">
+                    </div>
+                    <button id="sendFileByUrl" type="submit" class="btn btn-primary m-1">sendFileByUrl</button>
+                </form>
+            </div>
+            <div class="col-9 border-start border-dark">
+                <ul id="messages" class="list-group list-group-flush ">
+                </ul>
+            </div>
+        </div>
+
+    </div>
 </body>
+
 </html>
